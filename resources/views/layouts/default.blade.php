@@ -23,6 +23,11 @@
         footer{
             margin: 4em 0;
         }
+
+        .active {
+            border: ridge 2px lightseagreen;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
