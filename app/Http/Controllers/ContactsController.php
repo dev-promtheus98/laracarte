@@ -22,6 +22,6 @@ class ContactsController extends Controller
 
         flashy('Nous vous repondrons dans les plus brefs delais');
 
-        return redirect()->route('root_path');
+        return redirect()->home();
     }
 }

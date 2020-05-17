@@ -14,26 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [
-    "as" => "root_path",
-    "uses" => "PagesController@home"
-]);
+Route::view('/', 'pages.home')->name('home');
 
-Route::get('/test-email', function(){
-    return new ContactMessageCreated('Zana', 'Zana@mail.com', 'Je suis content');
-});
+Route::view('/about', 'pages.about')->name('about');
 
-Route::get('/about', [
-    "as" => "about_path",
-    "uses" => "PagesController@about"
-]);
+Route::get('/contact', 'ContactsController@create')->name('contacts.create');
 
-Route::get('/contact', [
-    "as" => "contact_path",
-    "uses" => "ContactsController@create"
-]);
-
-Route::post('/contact', [
-    "as" => "contact_path",
-    "uses" => "ContactsController@store"
-]);
+Route::post('/contact', 'ContactsController@store')->name('contacts.store');
