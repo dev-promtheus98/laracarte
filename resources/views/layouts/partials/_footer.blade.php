@@ -1,4 +1,4 @@
-<footer class="text-center">
+<footer class="text-center py-3">
     <p>
         &copy; {{ date('Y') }} &middot; {{ config('app.name') }} by @zana_Ouattara - A Laramap clone App
     </p>
