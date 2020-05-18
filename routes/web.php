@@ -1,6 +1,7 @@
 <?php
 
 use App\Mail\ContactMessageCreated;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,3 +22,5 @@ Route::view('/about', 'pages.about')->name('about');
 Route::get('/contact', 'ContactsController@create')->name('contacts.create');
 
 Route::post('/contact', 'ContactsController@store')->name('contacts.store');
+
+Auth::routes(['verify' => true]);
